@@ -14,12 +14,9 @@ return new class extends Migration
             $table->string('no_mr');
             $table->string('reg_no');
             $table->string('nama');
-            $table->date('tanggal');
-
             $table->string('file_path'); // path file gambar
-
+            $table->foreignId('user_id')->references('id')->on('users')->cascadeOnDelete();
             // optional tapi sangat disarankan
-            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
 
             $table->timestamps();
         });
