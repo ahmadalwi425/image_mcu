@@ -15,7 +15,9 @@
 /node_modules
 /public/build
 /public/hot
-/public/storage/mcu
+storage/app/public/*
+!storage/app/public/assets/
+!storage/app/public/assets/**
 /storage/*.key
 /storage/pail
 /vendor
